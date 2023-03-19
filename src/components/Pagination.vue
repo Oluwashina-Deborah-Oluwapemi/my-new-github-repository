@@ -1,17 +1,13 @@
 <template>
-    <nav>
-      <ul class="pagination">
-        <li class="page-item" :class="{ disabled: currentPage === 1 }">
+<div class="pag">
+        <li class="page-item button" :class="{ disabled: currentPage === 1 }">
           <a class="page-link" href="#" @click.prevent="changePage(currentPage - 1)">Previous</a>
         </li>
-        <li class="page-item" v-for="page in pages" :key="page" :class="{ active: currentPage === page }">
-          <a class="page-link" href="#" @click.prevent="changePage(page)">{{ page }}</a>
-        </li>
-        <li class="page-item" :class="{ disabled: currentPage === totalPages }">
+ 
+        <li class="page-item button" :class="{ disabled: currentPage === totalPages }">
           <a class="page-link" href="#" @click.prevent="changePage(currentPage + 1)">Next</a>
         </li>
-      </ul>
-    </nav>
+    </div>
   </template>
   
   <script>
@@ -49,3 +45,30 @@
     },
   };
   </script>
+  <style>
+  li{
+    list-style: none;
+  }
+  .pag{
+        display: flex;
+        justify-content: space-between;
+    }
+
+  .pagination{
+    display: flex;
+        justify-content: space-between;
+
+  }
+    .button{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color: #8A81EF;
+        color: white;
+        border-radius: 0.5rem;
+        border: 0;
+        margin: 20px;
+
+    }
+</style>

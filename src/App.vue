@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div class="main">
+  <div class="repo_container">
     <nav>
-      <ul>
+ 
         <li><router-link to="/">Home</router-link></li>
-      </ul>
     </nav>
     <router-view></router-view>
+  </div>
   </div>
 </template>
 
@@ -18,29 +19,60 @@ export default {
 </script>
 
 <style>
-#app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+    nav{
+        background-color: #8A81EF;
+        height: 15%;
+        border-radius: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    nav li{
+        list-style: none;
+        padding: 0;
+        color:white;
 
-nav {
-  padding: 1rem;
-  background-color: grey;
-}
+    }
 
-nav a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-}
-nav a:hover {
-  color: black;
-  background: white;
-}
-main {
-  flex-grow: 1;
-  padding: 1rem;
-}
+    .repo_container{
+        background-color: white;
+        width: 22rem;
+        height: 30rem;
+        border-radius: 1rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    body{
+      background-color: #F8F9FF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        width: 5rem;
+        background-color: #FFD9B8;
+    }
+
+  .repo__container{
+        background-color: white;
+        width: 22rem;
+        height: 30rem;
+        border-radius: 1rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
 </style>

@@ -1,11 +1,15 @@
 <template>
-    <div>
+    <div class="details">
       <h2>{{ repo.name }}</h2>
       <p>{{ repo.description }}</p>
       <p><strong>Language:</strong> {{ repo.language }}</p>
       <p><strong>Stars:</strong> {{ repo.stargazers_count }}</p>
       <p><strong>Created:</strong> {{ repo.created_at }}</p>
       <p><strong>Last updated:</strong> {{ repo.updated_at }}</p>
+    </div>
+
+    <div class="oi">
+
     </div>
   </template>
   
@@ -38,9 +42,17 @@
   </script>
 
 <style>
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}        
+.oi{
+    height: 5rem;
+}
 h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: -0.4rem;
 }
 
 p {
@@ -53,7 +65,7 @@ strong {
 }
 
 a {
-  color: #333;
+  color: white;
   text-decoration: none;
 }
 
